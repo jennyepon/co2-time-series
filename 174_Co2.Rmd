@@ -11,12 +11,28 @@ output:
 \newpage
 
 ## Executive Summary
-The dataset I am using is monthly historical values of $CO_{2}$ measured in Hawaii. Box-Jenkins methodology was used to build a model appropriate for this data through model formulation, estimation, evaluation, and forecasting. Two potential models were considered and compared. The selected model was then used to forecast future $CO_{2}$ levels. The forecasted values produced from the selected model were very accurate, as they aligned closely with our test data, and fell within the prediction interval.
+The dataset I am using is monthly historical values of $CO_{2}$ measured in Hawaii. 
+Box-Jenkins methodology was used to build a model appropriate for this data through 
+model formulation, estimation, evaluation, and forecasting. 
+Two potential models were considered and compared. 
+The selected model was then used to forecast future $CO_{2}$ levels. 
+The forecasted values produced from the selected model were very accurate, 
+as they aligned closely with our test data, and fell within the prediction interval.
   
 ## Introduction
-This time series data used in this report came from the CO2Hawaii dataset from the Stat2Data package in R. This dataset of historical values of $CO_2$ is measured in particles per million (ppm) from 1980 to 2017. The data from 1980 to 2016 was used to build a model, while the 2017 data was later used to test the accuracy of the selected model's forecasting ability. This data is important because powerful greenhouse gases like $CO_{2}$ are the most prominent contributers to climate change due to the greenhouse effect. I chose this dataset because I have an interest in environmental issues, and climate change is the defining environmental issue of our time. 
+This time series data used in this report came from the CO2Hawaii dataset from the Stat2Data package in R. 
+This dataset of historical values of $CO_2$ is measured in particles per million (ppm) from 1980 to 2017. 
+The data from 1980 to 2016 was used to build a model, while the 2017 data was later used to test the accuracy 
+of the selected model's forecasting ability. This data is important because powerful greenhouse gases like 
+$CO_{2}$ are the most prominent contributers to climate change due to the greenhouse effect. I chose this 
+dataset because I have an interest in environmental issues, and climate change is the defining environmental 
+issue of our time. 
 
-In this project, I intend to forecast $CO_{2}$ values in Hawaii. Using Box-Jenkins methodology, two potential SARIMA models were identified and put through diagnostic checking. In diagnostic checking, neither model passed the Shapiro-Wilk normality test, but both passed all the other components of the procedure. Both models also had similar AICc values, with Model 1 having the lower value. Model 1 was ultimately chosen based on the AICc and the principle of parsimony. RStudio was the software used for statistical computing.
+In this project, I intend to forecast $CO_{2}$ values in Hawaii. Using Box-Jenkins methodology, two potential 
+SARIMA models were identified and put through diagnostic checking. In diagnostic checking, neither model 
+passed the Shapiro-Wilk normality test, but both passed all the other components of the procedure. Both 
+models also had similar AICc values, with Model 1 having the lower value. Model 1 was ultimately chosen based 
+on the AICc and the principle of parsimony. RStudio was the software used for statistical computing.
   
 ```{r include = FALSE}
 install.packages("Stat2Data",repos = "http://cran.us.r-project.org")
